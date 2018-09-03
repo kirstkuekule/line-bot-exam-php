@@ -13,7 +13,7 @@ $pushID = 'U92763d00fc1a27f8c121cbae0c17643c';
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello world');
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('สวัสดีครับ นี้เป็นระบบแจ้งเตือน และ ประชาสัมพันธ์ ของโรงพยาบาลนาหม่อม ขอแจ้งว่า ท่านได้มีการนัดเข้ารับการรักษาตัว ในวันที่ 04/09/2561 จึงขอให้ท่านมาตามนัดด้วยค่ะ');
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
