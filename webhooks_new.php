@@ -27,11 +27,11 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
 } else if($arrJson['events'][0]['message']['text'] == "ฝันดี"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "sticker";
-        $arrayPostData['messages'][0]['packageId'] = "2";
-        $arrayPostData['messages'][0]['stickerId'] = "46";
-        replyMsg($arrayHeader,$arrayPostData);
+        $arrPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrPostData['messages'][0]['type'] = "sticker";
+        $arrPostData['messages'][0]['packageId'] = "2";
+        $arrPostData['messages'][0]['stickerId'] = "46";
+        replyMsg($arrHeader,$arrPostData);
 }else if($message == "รูปน้องแมว"){
         $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
